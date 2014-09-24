@@ -1,0 +1,742 @@
+:root {
+    --ltBlue: rgb(175, 182, 190);
+    --mdBlue: rgb(107, 124, 140);
+    --borderBlue: rgb(155, 166, 172);
+    --mdTan: rgb(196, 173, 132);
+    --ltTan: rgb(230, 213, 193);
+    --dkGray: rgb(39, 43, 46);
+    --textShadowDefault: 3px 3px 5px rgba(1, 1, 1, 0.5);
+    /*--boxShadowBoth: ;*/
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+body {
+    min-width: 450px;
+    margin: 0;
+    font-size: 0;
+}
+/*"  _                _           
+| | | |              | |          
+| |_| | ___  __ _  __| | ___ _ __ 
+|  _  |/ _ \/ _` |/ _` |/ _ \ '__|
+| | | |  __/ (_| | (_| |  __/ |   
+\_| |_/\___|\__,_|\__,_|\___|_|  "*/
+
+.header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: var(--mdBlue);
+    font-size: 1rem;
+    z-index: 3;
+}
+.menuButton {
+    display: inline-block;
+    padding: 0 0.5rem;
+    margin: 13px;
+    font-size: 2.8em;
+    line-height: 1.43;
+    height: 71px;
+    background-color: var(--ltBlue);
+    border-radius: 23px;
+    border: 2px solid var(--borderBlue);
+}
+.nameLogo {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--ltBlue);
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: var(--textShadowDefault);
+    line-height: 1;
+}
+.headerSectionLinks {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6em;
+    font-family: "Ubuntu";
+    font-weight: 500;
+}
+.headerNav {
+    display: inline-block;
+}
+.topButton {
+    display: none;
+    position: absolute;
+    top: 17px;
+    right: 12px;
+    /*transform: translateY(-50%);*/
+    color: white;
+    font-size: 2.4em;
+    line-height: 0.1;
+    text-align: center;
+}
+.upArrows {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.topButton p {
+    font-size: 0.5em;
+    font-weight: 700;
+}
+.headerOutsideLinks {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    color: var(--dkGray);
+    background-color: var(--ltBlue);
+    border-radius: 50px;
+    border: 2px solid var(--borderBlue);
+    font-size: 2.4em;
+    padding: 0 11px;
+    height: 60px;
+    line-height: 1.4;
+}
+@media (min-width: 600px) {
+    .headerSectionLinks {
+        display: inline-block;
+        opacity: 1;
+    }
+    .topButton {
+        display: inline-block;
+    }
+    .headerOutsideLinks {
+        display: none;
+    }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+    .header {
+        height: 75px;
+    }
+    .menuButton {
+        display: inline-block;
+        margin: 0;
+        transform: scale(0.7);
+    }
+    .nameLogo {
+        transform: translate(-50%, -50%)scale(0.7);
+    }
+    .headerSectionLinks {
+        display: none;
+    }
+    .topButton {
+        top: 43px;
+        right: -9px;
+        transform: translate(-50%, -50%)scale(0.7);
+    }
+}
+@media (min-width: 900px) {
+    .menuButton {
+        display: none;
+    }
+    .nameLogo {
+        position: relative;
+        text-align: left;
+        top: auto;
+        left: auto;
+        transform: translate(0, 0);
+        width: 350px;
+        margin: 5px 10px;
+    }
+}
+/*"  ___                     
+|  \/  |                     
+| .  . | ___ _ __  _   _ ___ 
+| |\/| |/ _ \ '_ \| | | / __|
+| |  | |  __/ | | | |_| \__ \
+\_|  |_/\___|_| |_|\__,_|___/"*/
+
+.menuOpen {
+    display: block;
+    position: fixed;
+    width: 225px;
+    height: 100vh;
+    padding-top: 110px;
+    background-color: rgb(38, 43, 56);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), inset 1px 1px 7px rgba(0, 0, 0, 0.5);
+}
+.menuOpen ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: rgb(110, 126, 141);
+}
+.menuItem {
+    padding: 0em 25px;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.6)
+}
+.leftMenu {
+    top: 0;
+    left: 0;
+    border-right: 5px solid var(--borderBlue);
+    transform: translateX(-100%);
+}
+.rightMenu {
+    top: 0;
+    right: 0;
+    border-left: 5px solid var(--borderBlue);
+    transform: translateX(100%);
+}
+.menuOpenOn {
+    transform: translateX(0);
+}
+/*"___       _           _      
+/  ___|     | |         | |     
+\ `--. _ __ | | __ _ ___| |__   
+ `--. \ '_ \| |/ _` / __| '_ \  
+/\__/ / |_) | | (_| \__ \ | | | 
+\____/| .__/|_|\__,_|___/_| |_| 
+      | |                       
+ _____|_|                                  
+/  ___|                         
+\ `--.  ___ _ __ ___  ___ _ __  
+ `--. \/ __| '__/ _ \/ _ \ '_ \ 
+/\__/ / (__| | |  __/  __/ | | |
+\____/ \___|_|  \___|\___|_| |_|"*/
+
+.splashScreen {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    min-height: 700px;
+    position: relative;
+    overflow: hidden;
+    font-size: 1rem;
+}
+.backgroundImages {
+    display: block;
+    position: absolute;
+    top: -29%;
+    left: -14%;
+    transform: rotate(-45deg);
+    width: 200%;
+    min-height: 200vh;
+    z-index: -1;
+    font-size: 0;
+    transition: all 0.3s ease;
+}
+.backgroundImages:before {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #1e5799 0%, #7db9e8 100%);
+    z-index: 0;
+}
+.bgImageRow {
+    height: 45vh;
+    width: 100%;
+    margin: -2px;
+    -webkit-filter: grayscale(70%);
+    background: linear-gradient(135deg, #1e5799 0%, #7db9e8 100%);
+}
+.topMainSection {
+    display: block;
+    width: 100%;
+    padding: 1em 1em 0;
+}
+.topMainSection ul {
+    list-style-type: none;
+}
+.title {
+    text-align: right;
+    text-decoration: none;
+    text-shadow: 1px 1px 5px black;
+    font-weight: 700;
+    color: rgb(165, 172, 178);
+    margin: 0;
+    margin-bottom: -0.3em;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.name {
+    font-size: 3em;
+    margin-bottom: -0.15em;
+}
+.subtitle {
+    font-size: 1.9em;
+}
+.bottomMainSection {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.contentLinks {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.contentButtons {
+    padding-left: 0;
+}
+.goto {
+    display: inline-block;
+    font-family: "Ubuntu";
+    width: 30%;
+    max-width: 150px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em 0em;
+    border: 1px solid black;
+    border-radius: 15px;
+    border: 3px solid rgb(171, 171, 171);
+    background-color: rgb(242, 238, 230);
+    box-shadow: inset 1px 9px 10px rgba(255, 255, 255, 2), inset 1px -6px 10px rgba(1, 1, 1, 0.2);
+    cursor: pointer;
+    /*transition: background-color ease, box-shadow ease, border ease, width 0.25s ease, position 0.25s ease;*/
+}
+.goto:hover {
+    border: 3px solid rgb(181, 181, 181);
+    background-color: rgb(244, 244, 244);
+    box-shadow: inset 1px -6px 10px rgba(1, 1, 1, 0.4), 1px 1px 13px rgba(1, 1, 1, 0.7);
+    transition: all ease;
+}
+.goto:active {
+    border: 3px solid rgb(146, 151, 156);
+    background-color: rgb(206, 204, 199);
+    box-shadow: inset 1px 7px 13px rgba(1, 1, 1, 0.4), inset 1px -6px 16px rgba(1, 1, 1, 0.4);
+    transition: all ease;
+}
+.navBrackets {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 136px;
+    background-image: url('../assets/images/nav_bracket.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: -1;
+}
+.linksSection {
+    display: block;
+    width: 80%;
+    padding: 1em 0;
+    margin: 0 auto 1em;
+}
+.linkDescription {
+    display: none;
+    width: 100%;
+    padding: 0.4em 0;
+    margin-bottom: 15px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(3, 172, 3);
+    font-family: 'Ubuntu';
+    font-style: italic;
+    font-size: 1.25em;
+    border: 3px solid rgb(51, 55, 60);
+    border-radius: 20px;
+    text-align: center;
+    opacity: 0.7;
+    z-index: 1;
+}
+.outsideLinks {
+    display: block;
+    width: 100%;
+    text-align: justify;
+}
+.outsideLinks:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+.iconSet {
+    display: inline-block;
+    text-align: justify;
+}
+.iconSet:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+.set1 {
+    width: 58%;
+}
+.set2 {
+    width: 38%;
+}
+.iconBox {
+    display: inline-block;
+    margin: 1px;
+    border-radius: 50px;
+    font-size: 2em;
+    background-color: white;
+    padding: 0.05em 0.45em;
+    text-align: center;
+    color: rgb(1, 1, 1);
+    transition: all 0.65s ease;
+}
+@media only screen and (max-width: 525px) {
+    .name {
+        font-size: 2.5em;
+    }
+    .subtitle {
+        font-size: 1.7em;
+    }
+    .linksSection {
+        width: 85%;
+    }
+    .set1 {
+        width: 58%;
+    }
+    .set2 {
+        width: 38%;
+    }
+}
+@media (min-width: 600px) {
+    .backgroundImages {
+        top: 0;
+        left: 0;
+        transform: rotateY(0);
+        transition: all 0.3s ease;
+    }
+    .bgImageRow {
+        height: 0;
+    }
+    .topRow {
+        height: 100vh;
+    }
+    .topMainSection {
+        padding: 0;
+    }
+    .title {
+        text-align: left;
+        font-weight: 900;
+        text-shadow: 3px 3px 5px black;
+    }
+    .name {
+        font-size: 4.5em;
+        margin-bottom: -52px;
+    }
+    .subtitle {
+        font-size: 3.5em;
+        margin-bottom: -31px;
+    }
+    .contentLinks {
+        position: absolute;
+        bottom: 5px;
+        left: 5%;
+        width: 310px;
+    }
+    .contentButtons {
+        padding-bottom: 105px;
+        padding-left: 10px;
+        width: 290px;
+    }
+    .goto {
+        margin: 0.3em 0 0;
+        width: 100%;
+        max-width: 300px;
+        padding: 0.45em;
+        font-size: 1.5em;
+    }
+    .navBrackets {
+        opacity: 1;
+        min-height: 136px;
+        background-size: 300px;
+    }
+    .linksSection {
+        position: absolute;
+        bottom: 0;
+        right: 5%;
+        width: 400px;
+        padding: 0;
+        margin: 0;
+    }
+    .linkDescription {
+        display: block;
+    }
+    .set1 {
+        width: 58%
+    }
+    .set2 {
+        width: 38%;
+    }
+    .call, .email, .download, .github, .linkedin {
+        position: relative;
+    }
+    .iconBox:hover:after {
+        display: block;
+        position: absolute;
+        opacity: 0;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5px;
+        height: 20px;
+        background-color: rgb(1, 1, 1);
+        content: '';
+        z-index: -1;
+    }
+    .iconBox:hover:after {
+        opacity: 0.7;
+    }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+    .name {
+        font-size: 3.5em;
+        margin-bottom: -30px;
+    }
+    .subtitle {
+        font-size: 2.5em;
+        margin-bottom: -20px;
+    }
+    .contentLinks {
+        bottom: 15px;
+        left: 5%;
+    }
+    .contentButtons {
+        padding-bottom: 69px;
+        width: 200px;
+    }
+    .navBrackets {
+        min-height: 90px;
+        background-size: 200px;
+    }
+    .goto {
+        display: block;
+        width: 100%;
+        margin: 1em 0 0;
+        max-width: 180px;
+        font-size: 1em;
+        padding: 1em 0em;
+    }
+    .linksSection {
+        width: 260px;
+    }
+    .set1, .set2 {
+        width: 100%;
+    }
+    .iconSet {
+        display: block;
+        text-align: center;
+        max-height: 65px;
+    }
+    .set2 .iconBox:hover:after {
+        height: 83px;
+    }
+}
+/*"   ____________ _____   ___        
+      | ___ \ ___ \  _  | |_  |       
+      | |_/ / |_/ / | | |   | |______ 
+      |  __/|    /| | | |   | |______|
+      | |   | |\ \\ \_/ /\__/ /       
+      \_|   \_| \_|\___/\____/        
+                                      
+                                      
+       _____ _____ _____ _____        
+      |  ___/  __ \_   _/  ___|       
+      | |__ | /  \/ | | \ `--.        
+      |  __|| |     | |  `--. \       
+      | |___| \__/\ | | /\__/ /       
+      \____/ \____/ \_/ \____/  "      
+*/
+
+.projectsSection {
+    display: block;
+    width: 100%;
+    background: url('../assets/images/bgProjects.jpg');
+    background-size: cover;
+    background-position: 75% 0%;
+    height: 100vh;
+    padding: 0 15px;
+}
+.leftSideProjects {
+    display: inline-block;
+    width: 100%;
+    padding-top: 100px;
+}
+.projectHeader {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Ubuntu";
+    color: var(--ltTan);
+    padding: 0.5em;
+    text-align: center;
+    text-shadow: var(--textShadowDefault);
+}
+.projectWindow {
+    display: block;
+    width: 100%;
+    height: 43vh;
+    border: 3px solid var(--ltTan);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5), inset 1px 1px 10px rgba(0, 0, 0, 0.5);
+    background: url('../assets/images/projects/affluentsy.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.projectNavigation {
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    border: 2px solid var(--dkGray);
+    border-radius: 15px;
+    margin-top: 3.5vh;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5% 0;
+    background-color: rgba(1, 1, 1, 0.3)
+}
+.leftArrow, .rightArrow {
+    display: inline-block;
+    background: url('../assets/images/arrow.png');
+    background-size: cover;
+    width: 37px;
+    height: 42px;
+}
+.rightArrow {
+    transform: rotate(180deg);
+}
+.projectTitle {
+    display: inline-block;
+    width: 70%;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--dkGray);
+}
+.projectButtons {
+    display: block;
+    width: 97%;
+    margin: 0 auto;
+    text-align: justify;
+}
+.liveButton, .githubProjectButton {
+    display: inline-block;
+    width: 40%;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--dkGray);
+    background-color: var(--mdTan);
+    border-radius: 15px;
+    border: 2px solid var(--ltTan);
+    margin-top: 2vh;
+}
+.projectButtons:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+.rightSideProjects {
+    display: inline-block;
+    width: 37%;
+    padding-top: 100px;
+    margin-left: 9vw;
+}
+.folderTop {
+    display: block;
+    background: url('../assets/images/folderTopProjects.png');
+    background-size: cover;
+    height: 38px;
+    width: 253px;
+    margin-left: 10px;
+}
+.folderMain {
+    display: block;
+    background-color: var(--mdTan);
+    width: 100%;
+    height: 80vh;
+    border-radius: 15px;
+}
+.folderRowLg {
+	display: block;
+	width: 100%;
+	height: 40%;
+}
+.folderRowSm {
+	display: block;
+	width: 100%;
+	height: 20%;
+}
+.projFolderButton {
+	display: inline-block;
+	background: url('../assets/images/projects/affluentsy.jpg');
+	background-size: cover;
+	border-radius: 10px;
+	padding: 3%;
+}
+.lgFolderButton {
+	width: 45%;
+}
+.smFolderButton {
+	width: 28%;
+}
+@media (min-width: 650px) {
+    .leftSideProjects {
+        width: 52%;
+        padding-left: 4vw;
+    }
+    .projectWindow {
+        height: 55vh;
+        border: 5px solid var(--ltTan);
+    }
+    .projectHeader {
+        font-size: 2.9rem;
+        padding: 1rem;
+    }
+    .projectNavigation {
+        display: none;
+    }
+    .liveButton, .githubProjectButton {
+        width: 40%;
+        font-size: 2rem;
+        line-height: 1.5;
+        border: 5px solid rgb(230, 213, 193);
+        margin-top: 3.5vh;
+    }
+}
+/*"   _______   ________ ___________       
+     |  ___\ \ / /| ___ \  ___| ___ \      
+     | |__  \ V / | |_/ / |__ | |_/ /_____ 
+     |  __| /   \ |  __/|  __||    /______|
+     | |___/ /^\ \| |   | |___| |\ \       
+     \____/\/   \/\_|   \____/\_| \_|      
+      _____ _____ _   _ _____  _____       
+     |_   _|  ___| \ | /  __ \|  ___|      
+       | | | |__ |  \| | /  \/| |__        
+       | | |  __|| . ` | |    |  __|       
+      _| |_| |___| |\  | \__/\| |___       
+      \___/\____/\_| \_/\____/\____/ "*/
+
+/*"__  ______  _____ _   _ _____ 
+ / _ \ | ___ \|  _  | | | |_   _|
+/ /_\ \| |_/ /| | | | | | | | |  
+|  _  || ___ \| | | | | | | | |  
+| | | || |_/ /\ \_/ / |_| | | |  
+\_| |_/\____/  \___/ \___/  \_/  
+___  ___ _____                   
+|  \/  ||  ___|                  
+| .  . || |__                    
+| |\/| ||  __|                   
+| |  | || |___                   
+\_|  |_/\____/       "*/
