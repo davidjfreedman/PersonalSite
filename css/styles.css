@@ -456,7 +456,7 @@ body {
         font-size: 1.5em;
     }
     .navBrackets {
-        opacity: 1;
+        opacity: 0.2;
         min-height: 136px;
         background-size: 300px;
     }
