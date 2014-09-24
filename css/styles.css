@@ -216,7 +216,6 @@ body {
     display: block;
     height: 100vh;
     width: 100%;
-    min-height: 700px;
     position: relative;
     overflow: hidden;
     font-size: 1rem;
@@ -236,6 +235,7 @@ body {
 .backgroundImages:before {
     display: block;
     width: 100%;
+    height: 100%;
     background: linear-gradient(135deg, #1e5799 0%, #7db9e8 100%);
     z-index: 0;
 }
@@ -541,6 +541,45 @@ body {
         height: 83px;
     }
 }
+@media (min-width: 600px) and (max-height: 550px) {
+    .contentButtons {
+        width: 250px;
+        padding-left: 0;
+        padding-bottom: 69px;
+    }
+    .goto {
+        font-size: 0.7em;
+    }
+    .aboutButton {
+        display: inline-block;
+        width: 30%;
+    }
+    .experienceButton {
+        display: inline-block;
+        width: 30%;
+    }
+    .projectsButton {
+        display: inline-block;
+        width: 28%;
+    }
+    .navBrackets {
+        min-height: 90px;
+        background-size: 250px 90px;
+    }
+}
+@media (min-width: 900px) and (max-height: 550px) {
+    .goto {
+        padding: 1em 0;
+    }
+  	.contentButtons {
+  		width: 300px;
+  	}
+
+    .navBrackets {
+        min-height: 90px;
+        background-size: 300px 90px;
+    }
+}
 /*"   ____________ _____   ___        
       | ___ \ ___ \  _  | |_  |       
       | |_/ / |_/ / | | |   | |______ 
@@ -669,27 +708,27 @@ body {
     border-radius: 15px;
 }
 .folderRowLg {
-	display: block;
-	width: 100%;
-	height: 40%;
+    display: block;
+    width: 100%;
+    height: 40%;
 }
 .folderRowSm {
-	display: block;
-	width: 100%;
-	height: 20%;
+    display: block;
+    width: 100%;
+    height: 20%;
 }
 .projFolderButton {
-	display: inline-block;
-	background: url('../assets/images/projects/affluentsy.jpg');
-	background-size: cover;
-	border-radius: 10px;
-	padding: 3%;
+    display: inline-block;
+    background: url('../assets/images/projects/affluentsy.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    padding: 3%;
 }
 .lgFolderButton {
-	width: 45%;
+    width: 45%;
 }
 .smFolderButton {
-	width: 28%;
+    width: 28%;
 }
 @media (min-width: 650px) {
     .leftSideProjects {
