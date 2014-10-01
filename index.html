@@ -10,7 +10,72 @@
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
 </head>
 
-<body>
+<body id="top">
+    <div class="header">
+        <div class="menuButton"><i class="fa fa-bars"></i>
+        </div>
+        <div class="nameLogo">David
+            <br>Freedman</div>
+        <div class="headerSectionLinks">
+            <div class="headerNav headerLine"><a class="headerLink" href="#projects">Projects</a>
+            </div>
+            <div class="headerNav headerSpacer">&nbsp;|&nbsp;</div>
+            <div class="headerNav headerLine"><a class="headerLink" href="#experience">Experience</a>
+            </div>
+            <div class="headerNav headerSpacer">&nbsp;|&nbsp;</div>
+            <div class="headerNav"><a class="headerLink" href="#about">About</a>
+            </div>
+        </div>
+        <a href="#top">
+            <div class="topButton">
+                <i class="fa fa-angle-double-up upArrows"></i>
+                <p>TOP</p>
+            </div>
+        </a>
+        <div class="headerOutsideLinks">
+            <img src="../assets/images/contact.png">
+            </i>
+        </div>
+    </div>
+    <div class="menuOpen leftMenu">
+        <ul>
+            <a class="menuLink" href="#top">
+                <li class="menuItem">Top</li>
+            </a>
+            <a class="menuLink" href="#projects">
+                <li class="menuItem">Projects</li>
+            </a>
+            <a class="menuLink" href="#experience">
+                <li class="menuItem">Experience</li>
+            </a>
+            <a class="menuLink" href="#about">
+                <li class="menuItem">About Me</li>
+            </a>
+        </ul>
+    </div>
+    <div class="menuOpen rightMenu">
+        <ul>
+            <a class="menuLink" href="tel:7813540981">
+                <li class="menuItem">Call me</li>
+            </a>
+            <a class="menuLink" href="mailto:davidjfreedman@gmail.com" target="_blank">
+                <li class="menuItem">Email me</li>
+            </a>
+            <a class="menuLink" href="./assets/David_Freedman_-_Resume.pdf">
+                <li class="menuItem">Resume</li>
+            </a>
+            <a class="menuLink" href="https://github.com/davidjfreedman">
+                <li class="menuItem">Github</li>
+            </a>
+            <a class="menuLink" href="https://www.linkedin.com/profile/view?id=6733076">
+                <li class="menuItem">LinkedIn</li>
+            </a>
+            <a class="menuLink" href="">
+                <li class="menuItem hide">Blog</li>
+            </a>
+        </ul>
+    </div>
+    <!-- <div class="mask"></div> -->
     <div class="splashScreen">
         <div class="backgroundImages">
             <div class="topRow bgImageRow"></div>
@@ -48,44 +113,76 @@
             </div>
         </div>
     </div>
-<!--     <div class="header">
-        <div class="menuButton"><i class="fa fa-bars"></i>
-        </div>
-        <div class="nameLogo">David
-            <br>Freedman</div>
-        <div class="headerSectionLinks">
-            <div class="headerNav headerLine">Projects</div>
-            <div class="headerNav headerSpacer">&nbsp;|&nbsp;</div>
-            <div class="headerNav headerLine">Experience</div>
-            <div class="headerNav headerSpacer">&nbsp;|&nbsp;</div>
-            <div class="headerNav">About</div>
-        </div>
-        <div class="topButton">
-            <i class="fa fa-angle-double-up upArrows"></i>
-            <p>TOP</p>
-        </div>
-        <div class="headerOutsideLinks"><i class="fa fa-plus"></i>
-        </div>
-    </div>
-    <div class="menuOpen leftMenu">
-        <ul>
-            <li class="menuItem">Top</li>
-            <li class="menuItem">Projects</li>
-            <li class="menuItem">Experience</li>
-            <li class="menuItem">About Me</li>
-        </ul>
-    </div>
-    <div class="menuOpen rightMenu">
-        <ul>
-            <li class="menuItem">Call me</li>
-            <li class="menuItem">Email me</li>
-            <li class="menuItem">Resume</li>
-            <li class="menuItem">Github</li>
-            <li class="menuItem">LinkedIn</li>
-            <li class="menuItem">Blog</li>
-        </ul>
-    </div>
     <div class="projectsSection" id="projects">
+        <div class="projectsHeader">
+            PROJECTS
+        </div>
+        <div class="projectsContent">
+            <div class="projectBox mainProjBox">
+                <div class="projTopSection">
+                    <img class="projImage" src="../assets/images/projects/affluentsy.jpg" />
+                </div>
+                <div class="projBottomSection">
+                    <div class="projTitle">
+                        Affluentsy
+                    </div>
+                    <div class="projDescription">
+                        Designed as a tongue-in-cheek blend of high-end retail sites and a the more hands-on Etsy, this project incorporates search engines, categorizing, sorting, and more.
+                    </div>
+                    <div class="projLinks">
+                        <a href="http://shielded-lake-4499.herokuapp.com">
+                            <div class="liveProjLink">
+                                LIVE SITE
+                            </div>
+                        </a>
+                        <a href="https://github.com/davidjfreedman/FinalProject">
+                            <div class="gitProjLink">
+                                CODE
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projTech">
+                        <p class="techTitle">Tech Used</p>
+                        <p class="techText">jQuery, Javascript, Myth, lodash/underscore templating, FontAwesome, Photoshop, JS Prototypes, Node.js, Etsy API, heroku, HTML, CSS, CSS3</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="experienceSection" id="experience"> -->
+<!--     </div>
+    <div class="aboutSection" id="about">
+        <div class="aboutHeader">
+            <div class="leftSection">
+                <div class="profilePic"></div>
+                <div class="aboutLinkDescription">hover for info</div>
+                <div class="aboutLinks">
+                </div>
+            </div>
+            <div class="aboutHeaderText">ABOUT ME</div>
+            <div class="aboutHole">
+                <div class="aboutText">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+        </div>
+        <div class="blogPointer"></div>
+        <div class="blogLink">blog posts</div>
+        <div class="updatesSection"></div>
+        <div class="footer">
+            <div class="footerImageBox"></div>
+            <div class="footerImageBox"></div>
+            <div class="footerImageBox"></div>
+            <div class="footerImageBox"></div>
+            <div class="footerImageBox"></div>
+            <div class="footerImageBox"></div>
+            <div class="footerImageBox"></div>
+            <div class="footerImageBox"></div>
+            <div class="footerImageBox"></div>
+        </div>
+    </div>
+ -->    <!--     <div class="projectsSection" id="projects">
         <div class="leftSideProjects">
             <div class="projectHeader sectionHeader">PROJECTS</div>
             <div class="projectWindow"></div>
@@ -117,8 +214,7 @@
                 </div>
             </div>
         </div>
-    </div>
- -->
+    </div> -->
     <script type="text/javascript" src="./app/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="./app/app.js"></script>
 </body>
