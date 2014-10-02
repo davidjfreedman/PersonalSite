@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kotaku Trawler</title>
+    <link rel="stylesheet" type="text/css" href="./css/jquery.jqplot.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="topDiv">
+<!--         <div class="searchDiv">
+            <form class="searchForm">
+                <input type="search" class="searchBox" placeholder="Search for a game, system, or term">
+                <input type="submit" class="submitButton" value="Submit">
+                <br>
+                <select class="measurement" name="measurement">
+                    <option class="daily">Daily</option>
+                    <option class="weekly">Weekly</option>
+                    <option class="monthly">Monthly</option>
+                </select>
+                <select class="dateRange" name="Date Range">
+                    <option class="1week">1 Week</option>
+                    <option class="1month">1 Month</option>
+                    <option class="6months">6 Months</option>
+                </select>
+            </form>
+
+        </div> -->
+        <div class="logo">Kotaku Trawler</div>
+        <div class="explanation">Please note that the site is not fully functional yet (nor is it very pretty).
+            <br>I will be updating over the next few days to get this working.<br> Currently searches for results on the video game 'Destiny'.
+        </div>
+    </div>
+    <div class="resultsHeader">
+        <div class="resultsAmount"></div>
+        <div class="pageviewSwitch">
+            <button class="pageviewButton">Show Pageviews</button>
+        </div>
+    </div>
+    <div class="mainContent">
+        <div class="resultsDestination"></div>
+        <div class="chartDestination">
+            <div id="chartdiv" style="height:400px;width:300px; "></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./app/jquery-1.11.1.min.js"></script>
+    <!-- <script type="text/javascript" src="./app/testing.js"></script> -->
+    <script language="javascript" type="text/javascript" src="./src/jquery.jqplot.js"></script>
+    <script type="text/javascript" src="./app/app.js"></script>
+</body>
+
+</html>
