@@ -5,6 +5,7 @@ function app() {
     //SPLASH SCREEN
 
 
+    var projArraySpot = 0;
 
     $(".iconBox").hover(
         function() {
@@ -80,7 +81,24 @@ function app() {
         var oneProj = projectsArray[i];
         var projHTML = '<div class="projectBox secondaryProjBoxes"><div class="projTopSection"><img class="projImage" src="../assets/images/projects/' + oneProj.image + '" /></div><div class="projBottomSection"><div class="projTitle">' + oneProj.name + '</div><div class="projDescription">' + oneProj.description + '</div><div class="projLinks"><a href="' + oneProj.liveLink + '"><div class="liveProjLink">LIVE SITE</div></a><a href="' + oneProj.gitSite + '"><div class="gitProjLink">CODE</div></a></div><div class="projTech"><p class="techTitle">Tech Used</p><p class="techText">' + oneProj.tech + '</p></div></div></div>';
         $('.projectsContent').append(projHTML);
-    }
+    };
+
+    $('.outerProjPortions').on('click', function() {
+        if ($(this).attr('class') === "outerProjPortions leftProjNav") {
+            projArraySpot--;
+            if (projArraySpot < 0) {
+                projArraySpot = projectsArray.length - 1;
+            };
+        } else {
+            projArraySpot++;
+            if (projArraySpot === projectsArray.length) {
+                projArraySpot = 0;
+            };
+        }
+        var projHTML = '<div class="projTopSection"><img class="projImage" src="../assets/images/projects/' + projectsArray[projArraySpot].image + '" /></div><div class="projBottomSection"><div class="projTitle">' + projectsArray[projArraySpot].name + '</div><div class="projDescription">' + projectsArray[projArraySpot].description + '</div><div class="projLinks"><a href="' + projectsArray[projArraySpot].liveLink + '"><div class="liveProjLink">LIVE SITE</div></a><a href="' + projectsArray[projArraySpot].gitSite + '"><div class="gitProjLink">CODE</div></a></div><div class="projTech"><p class="techTitle">Tech Used</p><p class="techText">' + projectsArray[projArraySpot].tech + '</p></div></div>';
+        $('.mainProjBox')[0].innerHTML = projHTML;
+
+    });
     // each object is the code inset for the projects page
     // on
 
