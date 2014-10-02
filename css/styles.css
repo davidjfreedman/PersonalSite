@@ -361,6 +361,9 @@ body {
 .contentButtons {
     padding-left: 0;
 }
+.contentButtons a {
+    text-decoration: none;
+}
 .goto {
     display: inline-block;
     font-family: "Ubuntu";
