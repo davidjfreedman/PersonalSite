@@ -9,10 +9,10 @@ function app() {
     $(".iconBox").hover(
         function() {
             var hoverClassName = $(this).attr('class');
-            var hoverOutput = '';
-            if (hoverClassName.indexOf('iconBox') !== -1) {
-                hoverOutput = '.linkDescription';
-            };
+            // var hoverOutput = '';
+            // if (hoverClassName.indexOf('iconBox') !== -1) {
+            //     hoverOutput = '.linkDescription';
+            // };
             if (hoverClassName === 'call iconBox') {
                 $('.linkDescription').textContent = 'call me';
             } else if (hoverClassName === 'email iconBox') {
@@ -31,7 +31,9 @@ function app() {
         });
     $('.goto').hover(
         function() {
-            $(this)[0].textContent = "Coming Soon";
+            if ($(this).attr('class') !== "projectsButton goto") {
+                $(this)[0].textContent = "Coming Soon";
+            }
         },
         function() {
             var hoverClassName = $(this).attr('class');
@@ -105,13 +107,13 @@ function app() {
         $('.rightMenu').toggleClass('menuOpenOn');
     });
 
-    // $('.mask').click(function() {
-    //     if ($('.menuOpen').hasClass('menuOpenOn')) {
+    $('.mask').click(function() {
+        if ($('.menuOpen').hasClass('menuOpenOn')) {
 
-    //         $('.leftMenu').removeClass('menuOpenOn');
-    //         $('.rightMenu').removeClass('menuOpenOn');
-    //     };
-    // }); // clicking outside the open menu closes it.
+            $('.leftMenu').removeClass('menuOpenOn');
+            $('.rightMenu').removeClass('menuOpenOn');
+        };
+    }); // clicking outside the open menu closes it.
 
     $(window).resize(function() {
         if ($('.header').width() >= 900) {
