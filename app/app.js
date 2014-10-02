@@ -109,6 +109,7 @@ function app() {
             $('.header').addClass('headerOn');
         } else {
             $('.header').removeClass('headerOn');
+            $('.menuOpen').removeClass('menuOpenOn');
         }
     });
 
