@@ -642,7 +642,7 @@ body {
 .projectsSection {
     display: block;
     width: 100%;
-    min-height: 780px;
+    min-height: 750px;
     background-image: url('../assets/images/bgProjects.jpg');
     background-size: 100% 100%;
 }
@@ -853,14 +853,18 @@ ___  ___ _____
     font-size: 1rem;
     padding: 0 1em;
 }
-.aboutHeader {
+.aboutMain {
     display: block;
     width: 100%;
     padding-top: 130px;
     padding-bottom: 5px;
 }
-.leftSection {
+.leftPortion {
     display: inline-block;
+    text-align: center;
+    width: 17vw;
+    vertical-align: top;
+    padding-left: 1em;
 }
 .profilePic {
     display: inline-block;
@@ -870,6 +874,38 @@ ___  ___ _____
     background-size: cover;
     border-radius: 18px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+}
+.aboutLinkDescription {
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.25em;
+    color: white;
+    background-color: tan;
+    border-radius: 27px;
+}
+.aboutLinks {
+    display: none;
+    margin-top: 1.25em;
+}
+.aboutLinkSet {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.linkOut {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: 1px solid var(--dkGray);
+}
+.calls {
+    background-image: url('../assets/images/call.jpg');
+    background-size: contain;
+}
+.centerPortion {
+    display: inline-block;
 }
 .aboutHeaderText {
     display: inline-block;
@@ -885,7 +921,7 @@ ___  ___ _____
 .aboutHole {
     display: block;
     width: 100%;
-    height: 39vh;
+    height: 52vh;
     border-radius: 15px;
     background-color: white;
     box-shadow: inset 7px 7px 10px rgba(0, 0, 0, 0.5), inset 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -893,11 +929,27 @@ ___  ___ _____
 .aboutText {
     display: block;
     width: 100%;
-    line-height: 1.3;
-    padding: 1em;
+    line-height: 1.4;
+    padding: 0.4em 1em;
     font-weight: 700;
     font-size: 0.9em;
     color: var(--dkGray);
+}
+.rightPortion {
+    display: block;
+    width: 100%;
+}
+.blogPointer {
+    display: none;
+    background-image: url('../assets/images/pointer.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 48%;
+    height: 50px;
+    vertical-align: middle;
+    font-weight: 100;
+    line-height: 1.4;
 }
 .blogLink {
     font-size: 1.9rem;
@@ -911,6 +963,24 @@ ___  ___ _____
     margin: 0.5em auto;
     width: 50%;
     line-height: 1.7;
+}
+.updatesSection {
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+    height: 350px;
+    border-radius: 15px;
+    background-color: var(--borderBlue);
+}
+.updatesTop {
+    display: block;
+    background-color: rgb(69, 89, 100);
+    width: 100%;
+    padding: 0.25em 0;
+    padding-left: 1em;
+    border-radius: 15px 15px 0 0;
+    color: var(--ltBlue);
+    font-size: 1.25em;
 }
 .footer {
     display: block;
@@ -926,14 +996,58 @@ ___  ___ _____
     width: 150px;
     height: 100px;
 }
+@media (min-width: 700px) {
+    .footer {
+        display: block;
+    }
+}
 @media (min-width: 800px) {
-    .aboutHeader{
+    .aboutSection {
+        font-size: 0;
+    }
+    .aboutMain {
         display: inline-block;
-        width: 75%;
+        width: 67%;
+        vertical-align: top;
+        font-size: 1rem;
     }
     .profilePic {
-        width: 150px;
+        width: 200px;
+        height: 200px;
         border-radius: 0;
+        margin-bottom: 1.25em;
     }
-
+    .aboutHeaderText {
+        padding: 0.2em 0;
+    }
+    .aboutLinkDescription {
+        display: block;
+    }
+    .aboutLinks {
+        display: block;
+    }
+    .centerPortion {
+        display: inline-block;
+        width: 72%;
+        padding-left: 1em;
+    }
+    .aboutHole {
+        width: 100%;
+    }
+    .rightPortion {
+        display: inline-block;
+        width: 30%;
+        font-size: 1rem;
+        padding-top: 130px;
+        padding-bottom: 5px;
+    }
+    .blogPointer {
+        display: inline-block;
+    }
+    .blogLink {
+        display: inline-block;
+    }
+    .updatesSection {
+        display: block;
+    }
 }

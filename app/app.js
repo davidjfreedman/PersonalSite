@@ -9,6 +9,10 @@ function app() {
     $(".iconBox").hover(
         function() {
             var hoverClassName = $(this).attr('class');
+            var hoverOutput = '';
+            if (hoverClassName.indexOf('iconBox') !== -1) {
+                hoverOutput = '.linkDescription';
+            };
             if (hoverClassName === 'call iconBox') {
                 $('.linkDescription').textContent = 'call me';
             } else if (hoverClassName === 'email iconBox') {
@@ -88,22 +92,26 @@ function app() {
         }
     });
 
+    if (window.scrollY >= $('.splashScreen')[0].offsetHeight) {
+        $('.header').addClass('headerOn');
+    }
+
     //OPEN/CLOSE MENU
-    $('.menuButton').click(function() {
+    $('.menuButton').on('click', function() {
         $('.leftMenu').toggleClass('menuOpenOn');
     });
 
-    $('.headerOutsideLinks').click(function() {
+    $('.headerOutsideLinks').on('click', function() {
         $('.rightMenu').toggleClass('menuOpenOn');
     });
 
-    $('.mask').click(function() {
-        if ($('.menuOpen').hasClass('menuOpenOn')) {
+    // $('.mask').click(function() {
+    //     if ($('.menuOpen').hasClass('menuOpenOn')) {
 
-            $('.leftMenu').removeClass('menuOpenOn');
-            $('.rightMenu').removeClass('menuOpenOn');
-        };
-    }); // clicking outside the open menu closes it.
+    //         $('.leftMenu').removeClass('menuOpenOn');
+    //         $('.rightMenu').removeClass('menuOpenOn');
+    //     };
+    // }); // clicking outside the open menu closes it.
 
     $(window).resize(function() {
         if ($('.header').width() >= 900) {
