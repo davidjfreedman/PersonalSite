@@ -107,6 +107,7 @@ body {
     top: 17px;
     right: 12px;
     /*transform: translateY(-50%);*/
+    
     color: white;
     font-size: 2.4em;
     line-height: 0.1;
@@ -419,12 +420,13 @@ body {
     width: 100%;
     padding: 0.4em 0;
     margin-bottom: 15px;
-    background-color: rgb(0, 0, 0);
+    background: repeating-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 4px, rgba(255, 255, 255, 0.2) 6px, rgba(255, 255, 255, 0.2) 6px);
     color: rgb(3, 172, 3);
+    text-shadow: 1px 1px 5px black;
+    box-shadow: inset 0px 2px 15px black;
     font-family: 'Ubuntu';
     font-style: italic;
     font-size: 1.25em;
-    border: 3px solid rgb(51, 55, 60);
     border-radius: 20px;
     text-align: center;
     opacity: 0.7;
@@ -468,6 +470,8 @@ body {
     padding: 0.05em 0.45em;
     text-align: center;
     color: rgb(1, 1, 1);
+    box-shadow: inset 1px 9px 10px rgba(255, 255, 255, 2), inset 1px -6px 10px rgba(1, 1, 1, 0.4);
+    border: 2px solid snow;
     transition: all 0.65s ease;
 }
 @media only screen and (max-width: 525px) {
@@ -567,7 +571,7 @@ body {
         left: 50%;
         transform: translateX(-50%);
         width: 5px;
-        height: 20px;
+        height: 18px;
         background-color: rgb(1, 1, 1);
         content: '';
         z-index: -1;

@@ -15,7 +15,7 @@ function app() {
             //     hoverOutput = '.linkDescription';
             // };
             if (hoverClassName === 'call iconBox') {
-                $('.linkDescription').textContent = 'call me';
+                $('.linkDescription')[0].textContent = 'call me';
             } else if (hoverClassName === 'email iconBox') {
                 $('.linkDescription')[0].textContent = 'email me';
             } else if (hoverClassName === 'download iconBox') {

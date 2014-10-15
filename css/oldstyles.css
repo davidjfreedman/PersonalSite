@@ -1,4 +1,37 @@
-.projectsSection {
+    <!--     <div class="projectsSection" id="projects">
+        <div class="leftSideProjects">
+            <div class="projectHeader sectionHeader">PROJECTS</div>
+            <div class="projectWindow"></div>
+            <div class="projectNavigation">
+                <div class="leftArrow"></div>
+                <div class="projectTitle">'Affluentsy'
+                    <br>IY Final Project</div>
+                <div class="rightArrow"></div>
+            </div>
+            <div class="projectButtons">
+                <div class="liveButton">Live Site</div>
+                <div class="githubProjectButton">Github</div>
+            </div>
+        </div>
+        <div class="rightSideProjects">
+            <div class="folderTop"></div>
+            <div class="folderMain">
+                <div class="folderRowLg">
+                    <div class="projFolderButton lgFolderButton"></div>
+                    <div class="projFolderButton lgFolderButton"></div>
+                </div>
+                <div class="folderRowSm">
+                    <div class="projFolderButton smFolderButton"></div>
+                    <div class="projFolderButton smFolderButton"></div>
+                    <div class="projFolderButton smFolderButton"></div>
+                    <div class="projFolderButton smFolderButton"></div>
+                    <div class="projFolderButton smFolderButton"></div>
+                    <div class="projFolderButton smFolderButton"></div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    .projectsSection {
     display: block;
     width: 100%;
     background: url('../assets/images/bgProjects.jpg');
