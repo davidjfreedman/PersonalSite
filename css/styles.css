@@ -420,8 +420,7 @@ body {
     width: 100%;
     padding: 0.4em 0;
     margin-bottom: 15px;
-    background: repeating-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 4px, rgba(255, 255, 255, 0.2) 6px, rgba(255, 255, 255, 0.2) 6px);
-    color: rgb(3, 172, 3);
+    color: rgb(216, 216, 216);
     text-shadow: 1px 1px 5px black;
     box-shadow: inset 0px 2px 15px black;
     font-family: 'Ubuntu';
@@ -572,12 +571,12 @@ body {
         transform: translateX(-50%);
         width: 5px;
         height: 18px;
-        background-color: rgb(1, 1, 1);
+        box-shadow: inset 1px 5px 5px rgba(0,0,0,0.9);
         content: '';
         z-index: -1;
     }
     .iconBox:hover:after {
-        opacity: 0.7;
+        opacity: 0.5;
     }
 }
 @media (min-width: 600px) and (max-width: 900px) {
