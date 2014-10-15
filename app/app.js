@@ -28,7 +28,7 @@ function app() {
             // if $( this) ===
         },
         function() {
-            $('.linkDescription')[0].textContent = 'hover for info';
+            $('.linkDescription')[0].textContent = '- - -';
         });
     $('.goto').hover(
         function() {
