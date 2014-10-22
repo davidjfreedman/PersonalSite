@@ -1,0 +1,801 @@
+:root {
+    --mainColor: rgb(73, 68, 68);
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+body {
+    min-width: 450px;
+    margin: 0;
+    overflow-X: hidden;
+    cursor: default;
+    background: url(../assets/images/bgAbout.jpg) no-repeat center top fixed;
+}
+a {
+    cursor: pointer;
+}
+.emptyDiv {
+    position: absolute;
+    top: -120px;
+}
+/*"  _                _           
+| | | |              | |          
+| |_| | ___  __ _  __| | ___ _ __ 
+|  _  |/ _ \/ _` |/ _` |/ _ \ '__|
+| | | |  __/ (_| | (_| |  __/ |   
+\_| |_/\___|\__,_|\__,_|\___|_|  "*/
+
+.header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 450px;
+    width: 100%;
+    height: 120px;
+    background-color: rgb(39, 40, 34);
+    font-family: courier, serif;
+    z-index: 3;
+}
+.headerLeft {
+    display: inline-block;
+    width: 78%;
+    padding-left: 0.5rem;
+    padding-top: 0.45em;
+}
+.headerLeft h2 {
+    font-size: 1.5em;
+    line-height: 1;
+    color: white;
+}
+.headerLeft h3 {
+    font-size: 1.1em;
+    line-height: 0;
+    color: white;
+    /*color: rgb(166, 226, 46);*/
+}
+.contactA {
+    font-size: 1em;
+    line-height: 1;
+}
+.contactB {
+    font-size: 1em;
+    line-height: 1.9;
+}
+.contactA span, .contactB span {
+    font-weight: 700;
+}
+.phone {
+    border-bottom: 1px solid white;
+    color: white;
+    text-decoration: none;
+}
+.phone:hover {
+    color: rgb(249, 38, 114);
+    border-bottom: 1px solid rgb(249, 38, 114);
+}
+.email {
+    border-bottom: 1px solid white;
+    color: white;
+    text-decoration: none;
+}
+.email:hover {
+    color: rgb(102, 217, 239);
+    border-bottom: 1px solid rgb(102, 217, 239);
+}
+.headerLeft span {
+    font-size: 1rem;
+    margin-right: 0.7rem;
+    color: white;
+}
+.headerContact {
+    font-size: 1.2em;
+    line-height: 0;
+}
+.headerRight {
+    display: none;
+    width: 300px;
+    position: absolute;
+    top: 37px;
+    right: 0px;
+}
+.headerRight a {
+    text-decoration: none;
+}
+.goto {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0 4px;
+    color: white;
+    padding: 0.5em;
+}
+.goto:hover, .goto:active {
+    background-color: rgb(59, 60, 57);
+}
+.goto:active {
+    transform: translate(1px, 1px);
+}
+.aboutLink {
+    width: 100px;
+}
+.projectsLink {
+    width: 125px;
+}
+.menuButton {
+    padding: 0.5rem;
+    position: absolute;
+    top: 25px;
+    right: 21px;
+    font-size: 2.8em;
+    line-height: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 3px solid rgb(166, 166, 164);
+    color: rgb(166, 166, 164);
+    background-color: rgb(64, 64, 62);
+}
+.menuButton:hover {
+    border: 2px solid rgb(107, 124, 140);
+    box-shadow: 1px 1px 6px black;
+}
+.menuButton:active {
+    background-color: rgb(155, 166, 172);
+    box-shadow: 1px 1px 6px black;
+}
+/*"  ___                     
+|  \/  |                     
+| .  . | ___ _ __  _   _ ___ 
+| |\/| |/ _ \ '_ \| | | / __|
+| |  | |  __/ | | | |_| \__ \
+\_|  |_/\___|_| |_|\__,_|___/"*/
+
+.menuOpen {
+    display: block;
+    position: fixed;
+    width: 225px;
+    height: 100vh;
+    padding-top: 120px;
+    background-color: rgb(38, 43, 56);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), inset 1px 1px 7px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.menuOpen ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: rgb(110, 126, 141);
+}
+.menuLink {
+    text-decoration: none;
+}
+.menuItem a:hover {
+    color: rgb(155, 180, 204);
+}
+.menuItem a:active {
+    color: rgb(41, 71, 100);
+}
+.menuItem {
+    padding: 0em 25px;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.6);
+}
+.menuItem a {
+    color: rgb(110, 126, 141);
+}
+.inner {
+    background-color: rgb(17, 34, 52);
+}
+.addBottom {
+    border-bottom: 8px solid rgba(0, 0, 0, 0.6);
+}
+.rightMenu {
+    top: 0;
+    right: 0;
+    border-left: 5px solid rgb(155, 166, 172);
+    transform: translateX(100%);
+}
+.menuOpenOn {
+    transform: translateX(0);
+}
+/*"___       _           _      
+/  ___|     | |         | |     
+\ `--. _ __ | | __ _ ___| |__   
+ `--. \ '_ \| |/ _` / __| '_ \  
+/\__/ / |_) | | (_| \__ \ | | | 
+\____/| .__/|_|\__,_|___/_| |_| 
+      | |                       
+ _____|_|                                  
+/  ___|                         
+\ `--.  ___ _ __ ___  ___ _ __  
+ `--. \/ __| '__/ _ \/ _ \ '_ \ 
+/\__/ / (__| | |  __/  __/ | | |
+\____/ \___|_|  \___|\___|_| |_|"*/
+
+.splashPage {
+    display: block;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    background-image: url('../assets/images/bgSplash.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 120px;
+    font-family: sans-serif;
+    font-size: 1.4em;
+    color: rgba(255, 255, 255, 0.8);
+}
+.splashPage, .aboutPage, .projectsPage {
+    overflow-X: hidden;
+}
+.tagline1, .tagline2 {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.01em 0.5em;
+    transform: skew(-15deg);
+    border-radius: 5px;
+}
+.tagline1 {
+    top: 25px;
+    left: -58px;
+    padding-left: 3em;
+}
+.tagline2 {
+    bottom: 35px;
+    right: -54px;
+    padding-right: 3em;
+}
+/*"__  ______  _____ _   _ _____ 
+ / _ \ | ___ \|  _  | | | |_   _|
+/ /_\ \| |_/ /| | | | | | | | |  
+|  _  || ___ \| | | | | | | | |  
+| | | || |_/ /\ \_/ / |_| | | |  
+\_| |_/\____/  \___/ \___/  \_/  
+___  ___ _____                   
+|  \/  ||  ___|                  
+| .  . || |__                    
+| |\/| ||  __|                   
+| |  | || |___                   
+\_|  |_/\____/       "*/
+
+.aboutPage {
+    display: block;
+    width: 100%;
+    padding: 1rem 0.8em;
+    background-color: rgb(183, 183, 183);
+    position: relative;
+}
+.aboutLeft {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    padding: 0.7rem;
+    font-family: sans-serif;
+}
+.aboutPic {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 15px;
+    text-align: center;
+    background-image: url('../assets/images/profile.jpg');
+    background-size: cover;
+}
+.aboutLeft > span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: -6px;
+}
+.aboutText {
+    font-size: 0.9em;
+}
+.aboutText p {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+.aboutText p:first-child {
+    margin-top: 1em;
+}
+.aboutText p:nth-child(2) {
+    margin-bottom: 1.5em;
+    text-indent: 0;
+}
+.aboutText span {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+/*"___ _____ _____ _   ____  ___ _____ 
+| ___ \  ___/  ___| | | |  \/  ||  ___|
+| |_/ / |__ \ `--.| | | | .  . || |__  
+|    /|  __| `--. \ | | | |\/| ||  __| 
+| |\ \| |___/\__/ / |_| | |  | || |___ 
+\_| \_\____/\____/ \___/\_|  |_/\____/ "*/
+
+.aboutRight {
+    display: block;
+    width: 100%;
+    font-family: sans-serif;
+    margin-top: 1em;
+    position: relative;
+}
+.resume {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border-radius: 10px;
+    background-color: white;
+    padding: 0.7rem;
+}
+.resume > p {
+    display: block;
+    width: 100%;
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: -6px;
+    padding-left: 0.6rem;
+    margin-bottom: 0.1em;
+}
+.intro {
+    line-height: 1.11;
+    padding-left: 0.4em;
+    font-size: 0.845em;
+    font-weight: 600;
+}
+.jobs {
+    padding-left: 0;
+}
+.jobInfo {
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.5em;
+    padding-left: 2em;
+    border-radius: 10px;
+    list-style: none;
+    list-style-position: inside;
+    text-indent: -29px;
+    cursor: pointer;
+}
+.jobInfo:before {
+    content: "+";
+    background-color: white;
+    border: 2px solid var(--mainColor);
+    padding: 0 4px;
+    border-radius: 11px;
+    margin-right: 6px;
+}
+.jobInfo:hover:before {
+    background-color: rgb(216, 241, 253);
+}
+.separater {
+    display: none;
+}
+.jobTitle {
+    display: block;
+    padding-left: 1.8em;
+    font-size: 0.87em;
+    font-style: italic;
+}
+.jobspan {
+    display: block;
+    padding-left: 2em;
+    font-style: italic;
+    font-size: 0.8em;
+}
+.jobInfoShowing {
+    background-color: rgb(183, 183, 183);
+}
+.jobInfoShowing > .jobDescription {
+    display: block;
+    transform: scaleY(1);
+    transition: all 0.5s ease;
+}
+.jobDescription {
+    display: none;
+    margin-top: 1.2em;
+    text-indent: 0em;
+    margin-bottom: 1em;
+    line-height: 1.1;
+    padding-right: 0.5em;
+    transform: scaleY(0);
+}
+.resumeButton {
+    margin: 0 auto;
+    width: 260px;
+    margin-top: 2em;
+    text-align: center;
+}
+a.resumeButtonLink {
+    border: 3px solid var(--mainColor);
+    padding: 0.5em;
+    border-radius: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--mainColor);
+}
+.resumeButtonLink:hover, .resumeButtonLink:active {
+    background-color: rgb(213, 213, 213);
+}
+.resumeButtonLink:active {
+    transform: translate(1px, 1px);
+}
+.otherLinks {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+    padding: 0.7rem;
+    margin-top: 1em;
+}
+.otherLinks span {
+    display: block;
+    text-align: left;
+    width: 100%;
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: -6px;
+    padding-left: 0.6rem;
+    margin-bottom: 0.1em;
+}
+.links {
+    margin: 1em auto 0;
+    width: 91%;
+    text-align: justify;
+}
+.links:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+.linkButton {
+    display: inline-block;
+}
+.outerLinks {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0.5em;
+    border: 3px solid var(--mainColor);
+    border-radius: 15px;
+    color: var(--mainColor);
+}
+.outerLinks:hover, .outerLinks:active {
+    background-color: rgb(213, 213, 213);
+}
+.outerLinks:active {
+    transform: translate(1px, 1px);
+}
+/*"   ____________ _____   ___        
+      | ___ \ ___ \  _  | |_  |       
+      | |_/ / |_/ / | | |   | |___ 
+      |  __/|    /| | | |   | |___|
+      | |   | |\ \\ \_/ /\__/ /       
+      \_|   \_| \_|\___/\____/        
+       _____ _____ _____ _____        
+      |  ___/  __ \_   _/  ___|       
+      | |__ | /  \/ | | \ `--.        
+      |  __|| |     | |  `--. \       
+      | |___| \__/\ | | /\__/ /       
+      \____/ \____/ \_/ \____/  "      
+*/
+
+.projectsPage {
+    display: block;
+    width: 100%;
+    background-color: rgb(183, 183, 183);
+    font-family: sans-serif;
+}
+.projTop {
+    display: block;
+    width: 100%;
+    font-size: 2em;
+    font-weight: 700;
+    padding-left: 0.6rem;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    background-color: rgb(29, 29, 29);
+    color: rgb(208, 107, 34);
+}
+.projMargin {
+    width: 100%;
+}
+.projBox {
+    display: block;
+    text-align: justify;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2em 1em 0;
+}
+.projBox:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+.box1, .box1 a {
+    background-color: rgb(125, 140, 173);
+    color: white;
+    border-color: white;
+}
+.box1Button {
+    color: rgb(14, 16, 71);
+    border-color: rgb(14, 16, 71);
+}
+.box1Button:hover, .box1Button:active {
+    background-color: rgb(118, 158, 197);
+    color: rgb(1, 4, 69);
+}
+.box2, .box2 a {
+    background-color: rgb(174, 178, 186);
+    color: var(--mainColor);
+    border-color: var(--mainColor);
+}
+.box2Button {
+    color: rgb(42, 39, 39);
+    border-color: rgb(42, 39, 39);
+}
+.box2Button:hover, .box2Button:active {
+    background-color: rgb(195, 201, 211);
+    color: rgb(21, 19, 19);
+}
+.box3, .box3 a {
+    background-color: rgb(125, 140, 173);
+    color: white;
+    border-color: white;
+}
+.box3Button {
+    color: rgb(1, 4, 69);
+    border-color: rgb(1, 4, 69);
+}
+.box3Button:hover, .box3Button:active {
+    background-color: rgb(118, 158, 197);
+    color: rgb(1, 4, 69);
+}
+.projImage {
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 1em;
+    padding-bottom: 1.2em;
+    background-color: var(--mainColor);
+}
+.projImage img {
+    width: 100%;
+}
+.projRight {
+    display: block;
+    width: 100%;
+}
+.projInfo {
+    padding: 0 4em;
+    text-align: left;
+}
+.projTitle {
+    font-size: 2em;
+}
+.projTitle a {
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 2px solid;
+}
+.projDescription {
+    font-style: italic;
+    font-size: 0.84em;
+    line-height: 20px;
+    margin-bottom: 1em;
+}
+.projRight span {
+    font-size: 1em;
+    font-weight: 700;
+}
+.projTech {
+    font-size: 0.7em;
+    margin-top: 10px;
+    line-height: 20px;
+}
+.projButtons {
+    text-align: justify;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2em;
+    display: block;
+    padding: 0 2.4em;
+}
+.projButtons a {
+    text-decoration: none;
+}
+.projButtons:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+.projLinkButton {
+    display: inline-block;
+    width: 160px;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 3px solid;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 700;
+    padding: 8px 0;
+    margin-top: -5px;
+}
+.projLinkButton:active {
+    transform: translate(1px, 1px);
+}
+/*"_  __  ____      
+ |  \/  |/ __ \     
+ | \  / | |  | |___ 
+ | |\/| | |  | / __|
+ | |  | | |__| \__ \
+ |_|  |_|\___\_\___/"*/
+
+@media (min-width: 550px) and (max-width: 749px) {
+    .links {
+        width: 90%;
+    }
+    .outerLinks {
+        font-size: 1.2em;
+        padding: 0.7em;
+    }
+    .projButtons {
+        padding: 0 4.5em;
+    }
+}
+@media (min-width: 750px) {
+    .headerLeft {
+        width: 575px;
+        padding-top: 30px;
+    }
+    .headerLeft * {
+        display: inline-block;
+    }
+    .headerLeft h2 {
+        width: 275px;
+    }
+    .subtitle {
+        width: 235px;
+        line-height: 1;
+    }
+    .headerLeft h2, .subtitle {
+        margin-bottom: 0px;
+    }
+    .contactA {
+        width: 200px;
+    }
+    .contactB {
+        width: 320px;
+    }
+    .headerContact {
+        line-height: 1;
+    }
+    .headerLeft span {
+        width: 1em;
+    }
+    .subtitle span, .contactB span {
+        display: none;
+    }
+    .splashPage {
+        height: 50vh;
+    }
+    .tagline1 {
+        padding-left: 150px;
+    }
+    .tagline2 {
+        padding-right: 150px;
+    }
+    .aboutContent {
+        text-align: justify;
+        max-width: 975px;
+        margin: 0 auto;
+    }
+    .aboutContent:after {
+        content: '';
+        width: 100%;
+        display: inline-block;
+        font-size: 0;
+        line-height: 0;
+    }
+    .aboutLeft {
+        display: inline-block;
+        width: 49%;
+        vertical-align: top;
+        padding: 1.1rem;
+    }
+    .aboutRight {
+        display: inline-block;
+        width: 49%;
+        vertical-align: top;
+        margin-top: 0;
+        padding: 1.1rem;
+        padding-top: 0;
+    }
+    .outerLinks {
+        font-size: 1em;
+        font-weight: 700;
+        padding: 0.5em;
+        border: 3px solid var(--mainColor);
+        border-radius: 15px;
+        color: var(--mainColor);
+    }
+    .projBox {
+        max-width: 975px;
+        margin: 0 auto;
+    }
+    .projImage {
+        display: inline-block;
+        width: 49%;
+        vertical-align: middle;
+    }
+    .projRight {
+        display: inline-block;
+        width: 49%;
+        vertical-align: middle;
+    }
+    .projButtons {
+        padding: 0 0.4em;
+    }
+}
+@media (min-width: 750px) and (max-width: 899px) {
+    .outerLinks {
+        display: block;
+        width: 175px;
+        padding: 0.25em;
+        margin: 0.5em auto;
+    }
+    .links {
+        text-align: center;
+        margin: 0em auto -1em;
+    }
+}
+@media (min-width: 900px) {
+    .headerRight {
+        display: inline-block;
+    }
+    .menuButton {
+        display: none;
+    }
+    .splashPage {
+        height: 65vh;
+    }
+    .projButtons {
+        padding: 0 2.5em;
+    }
+}
+@media (min-width: 1200px) {
+    .splashPage, .aboutPage, .projectsPage {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .splashPage {
+        margin-top: 120px;
+    }
+    .tagline1 {
+        top: 40px;
+    }
+    .tagline2 {
+        bottom: 50px;
+        padding-right: 200px;
+    }
+}

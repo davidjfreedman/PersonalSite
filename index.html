@@ -2,246 +2,220 @@
 <html>
 
 <head>
-    <title>Portfolio of David Freedman</title>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,400italic' rel='stylesheet' type='text/css'>
+    <title>David Freedman - Front End Dev</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/typeplate.css">
-    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link href="./css/normalize.css" rel="stylesheet" type="text/css"></link>
+    <link href="./css/typeplate.css" rel="stylesheet" type="text/css"></link>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"></link>
 </head>
 
-<body id="top">
+<body>
     <div class="header">
+        <div class="headerLeft">
+            <h2>
+                <span>&gt;</span>David Freedman</h2>
+            <h3 class="subtitle">
+                <span>&gt;</span>Front End Developer</h3>
+            <div class="contactA">
+                <span>&gt;</span><a class="headerContact phone" href="tel:7813540981">781-354-0981</a>
+            </div>
+            <div class="contactB">
+                <span>&gt;</span><a class="headerContact email" href="mailto:davidjfreedman@gmail.com">davidjfreedman@gmail.com</a>
+            </div>
+        </div>
+        <div class="headerRight">
+            <a href="#about">
+                <div class="goto aboutLink">ABOUT</div>
+            </a>
+            <a href="#projects">
+                <div class="goto projectsLink">PROJECTS</div>
+            </a>
+        </div>
         <div class="menuButton"><i class="fa fa-bars"></i>
         </div>
-        <div class="nameLogo">David
-            <br>Freedman</div>
-        <div class="headerSectionLinks">
-            <div class="headerNav headerLine"><a class="headerLink" href="#projects">Projects</a>
-            </div>
-            <div class="headerNav headerSpacer">&nbsp;|&nbsp;</div>
-            <div class="headerNav headerLine"><a class="headerLink" href="#experience">Experience</a>
-            </div>
-            <div class="headerNav headerSpacer">&nbsp;|&nbsp;</div>
-            <div class="headerNav"><a class="headerLink" href="#about">About</a>
-            </div>
-        </div>
-        <a href="#top">
-            <div class="topButton">
-                <i class="fa fa-angle-double-up upArrows"></i>
-                <p>TOP</p>
-            </div>
-        </a>
-        <div class="headerOutsideLinks">
-            <img src="../assets/images/contact.png">
-            </i>
-        </div>
-    </div>
-    <div class="menuOpen leftMenu">
-        <ul>
-            <a class="menuLink" href="#top">
-                <li class="menuItem">Top</li>
-            </a>
-            <a class="menuLink" href="#projects">
-                <li class="menuItem">Projects</li>
-            </a>
-            <a class="menuLink" href="#experience">
-                <li class="menuItem">Experience</li>
-            </a>
-            <a class="menuLink" href="#about">
-                <li class="menuItem">About Me</li>
-            </a>
-        </ul>
     </div>
     <div class="menuOpen rightMenu">
         <ul>
-            <a class="menuLink" href="tel:7813540981">
-                <li class="menuItem">Call me</li>
-            </a>
-            <a class="menuLink" href="mailto:davidjfreedman@gmail.com" target="_blank">
-                <li class="menuItem">Email me</li>
-            </a>
-            <a class="menuLink" href="./assets/David_Freedman_-_Resume.pdf">
-                <li class="menuItem">Resume</li>
-            </a>
-            <a class="menuLink" href="https://github.com/davidjfreedman">
-                <li class="menuItem">Github</li>
-            </a>
-            <a class="menuLink" href="https://www.linkedin.com/profile/view?id=6733076">
-                <li class="menuItem">LinkedIn</li>
-            </a>
-            <a class="menuLink" href="">
-                <li class="menuItem hide">Blog</li>
-            </a>
+            <li class="menuItem inner"><a class="menuLink" href="#top">Home</a>
+            </li>
+            <li class="menuItem inner"><a class="menuLink" href="#about">About</a>
+            </li>
+            <li class="menuItem inner"><a class="menuLink" href="#resume">Experience</a>
+            </li>
+            <li class="menuItem inner addBottom"><a class="menuLink" href="#projects">Projects</a>
+            </li>
+            <li class="menuItem"><a class="menuLink" href="./assets/David_Freedman_-_Resume.pdf">Resume</a>
+            </li>
+            <li class="menuItem"><a class="menuLink" href="https://github.com/davidjfreedman">Github</a>
+            </li>
+            <li class="menuItem"><a class="menuLink" href="https://www.linkedin.com/profile/view?id=6733076">LinkedIn</a>
+            </li>
+            <!--             <li class="menuItem hide"><a class="menuLink" href="">Blog</a>
+            </li> -->
         </ul>
     </div>
-    <div class="mask"></div>
-    <div class="splashScreen">
-        <div class="backgroundImages">
-            <div class="topRow bgImageRow"></div>
-            <div class="midRow bgImageRow"></div>
-            <div class="botRow bgImageRow"></div>
-        </div>
-        <div class="topMainSection">
-            <ul>
-                <li class="name title">David Freedman</li>
-                <li class="subtitle title">Front End Developer</li>
-                <li class="subtitle title">UI/UX Wizard</li>
-            </ul>
-        </div>
-        <div class="bottomMainSection">
-            <div class="contentLinks">
-                <div class="contentButtons">
-                    <a href="#projects">
-                        <div class="projectsButton goto">Projects
-                        </div>
-                    </a>
-                    <div class="experienceButton goto">Experience</div>
-                    <div class="aboutButton goto">About</div>
+    <div class="splashPage">
+        <div class="emptyDiv" id="top"></div>
+        <div class="tagline1">Coding is like a puzzle...</div>
+        <div class="tagline2">and I love puzzles</div>
+    </div>
+    <div class="aboutPage">
+        <div class="aboutContent">
+            <div class="emptyDiv" id="about"></div>
+            <div class="aboutLeft">
+                <div class="aboutPic"></div>
+                <span>About Me</span>
+                <div class="aboutText">
+                    <p>I’m a New Englander born and bred, tossed from the suburbs of Boston to the mountains of Colorado (hence the lovely background), and lately to the food truck-laden streets of Houston.</p>
+                    <p>I keep my code neat, my UI interesting yet intuitive, and try to give the user the kind of experience I would want in their position. My background in the arts has segued nicely with my career in coding. I’ve found that having an excellent visual vocabulary is an indispensible asset as a web designer. I plan impeccably to produce timely and error-free results for my clients.</p>
+                    <span>Why Web Development?</span>
+                    <p>I’ve always had an interest in technology, and my logical mindset has led to an easy understanding of the syntax of various web languages. My design sensibilities are useful in planning out pages, however I am equally comfortable and skilled working solely with code.</p>
                 </div>
-                <div class="navBrackets"></div>
             </div>
-            <div class="linksSection">
-                <div class="linkDescription">- - -</div>
-                <div class="outsideLinks">
-                    <div class="iconSet set1"><a class="call iconBox" href="tel:7813540981"><i class="fa fa-phone icon"></i></a>
-                        <a class="email iconBox" href="mailto:davidjfreedman@gmail.com" target="_blank"><i class="fa fa-envelope icon"></i></a>
-                        <a class="download iconBox" href="./assets/David_Freedman_-_Resume.pdf" target="_blank"><i class="fa fa-book icon"></i></a>
-                    </div>
-                    <div class="iconSet set2"><a class="github iconBox" href="https://github.com/davidjfreedman" target="_blank"><i class="fa fa-git icon"></i></a>
-                        <a class="linkedin iconBox" href="https://www.linkedin.com/profile/view?id=6733076" target="_blank"><i class="fa fa-linkedin icon"></i></a>
+            <div class="aboutRight">
+                <div class="emptyDiv" id="resume"></div>
+                <div class="resume">
+                    <p>Resume</p>
+                    <div class="intro">My resume reflects the diversity of my career. Click on the job to see how each of my experiences will benefit your needs.</div>
+                    <ul class="jobs">
+                        <li class="tiy jobInfo">Studied Front End Engineering at The Iron Yard Academy
+                            <p class="jobDescription">This intensive program entailed 80 hours of coding per week. Throughout the program, I developed several high-end projects and honed my coding prowess.</p>
+                        </li>
+                        <li class="cms jobInfo">Cunningham Middle School
+                            <span class="separater">-</span>
+                            <span class="jobTitle">Art Teacher</span>
+                            <span class="jobspan">2012-2014</span>
+                            <p class="jobDescription">Coding relies on breaking up tasks into simpler steps in order to produce complex results. The same applies to teaching students, guiding them to the larger ideas by scaffolding atop simpler concepts.</p>
+                        </li>
+                        <li class="lfh jobInfo">Little Fish Holdings
+                            <span class="separater">-</span>
+                            <span class="jobTitle">Mktg./Admin. Asst.</span>
+                            <span class="jobspan">2011-2012</span>
+
+                            <p class="jobDescription">I produced the online marketing for the company&mdash;both rotating ads and interactive emails. I also maintained their online store and provided quality customer service.</p>
+                        </li>
+                        <li class="gamestop jobInfo">GameStop
+                            <span class="separater">-</span>
+                            <span class="jobTitle">Third Key Manager</span>
+                            <span class="jobspan">2010-2011</span>
+                            <p class="jobDescription">Communication is key to building successful relationships amongst clients and coworkers alike. My experience in retail has seen my skills in this area thrive, and is especially helpful in simplifying technical dialogue.</p>
+                        </li>
+                        <li class="creat jobInfo">CREAT Studios
+                            <span class="separater">-</span>
+                            <span class="jobTitle">Artist</span>
+                            <span class="jobspan">2011</span>
+                            <p class="jobDescription">In addition to the visual arts experience, one of my duties was to rework C# code to make sure UI elements of the games were positioned correctly on the screen.</p>
+                        </li>
+                        <li class="skylight jobInfo">Skylight Studios
+                            <span class="separater">-</span>
+                            <span class="jobTitle">Studio/Tech/Admin. Asst.</span>
+                            <span class="jobspan">2009-2011</span>
+                            <p class="jobDescription">At Skylight, I honed my visual arts skills, designing pre-production art to show to clients and helping to plan studio projects. I also was a key point of contact with coworkers and clients, a skill that is essential in most fields.</p>
+                        </li>
+                        <div class="resumeButton">
+                            <a class="resumeButtonLink" href="./assets/David_Freedman_-_Resume.pdf">
+                                View My Full Resume
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+                <div class="otherLinks">
+                    <span>Other Links:</span>
+                    <div class="links">
+                        <div class="linkButton">
+                            <a class="outerLinks" href="https://github.com/davidjfreedman">Github</a>
+                        </div>
+                        <div class="linkButton">
+                            <a class="outerLinks" href="https://www.linkedin.com/profile/view?id=6733076">LinkedIn</a>
+                        </div>
+                        <div class="linkButton">
+                            <a class="outerLinks" href="http://www.eccentric-illusions.com">Art Portfolio</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="projectsSection" id="projects">
-        <div class="projectsHeader">
-            PROJECTS
-        </div>
-        <div class="outerProjPortions leftProjNav">
-            <div class="projNavArrowBox leftPNABox"><i class="projNavArrow leftPNArrow fa fa-chevron-left"></i>
-            </div>
-        </div>
-        <div class="outerProjPortions rightProjNav">
-            <div class="projNavArrowBox rightPNABox"><i class="projNavArrow rightPNArrow fa fa-chevron-right"></i>
-            </div>
-        </div>
-        <div class="projectsContent">
-            <div class="projectBox mainProjBox">
-                <div class="projTopSection">
-                    <img class="projImage" src="../assets/images/projects/affluentsy.jpg" />
+    <div class="projectsPage">
+        <div class="emptyDiv" id="projects"></div>
+        <div class="projTop">Projects</div>
+        <div class="projMargin box1">
+            <div class="projBox box1">
+                <div class="projImage">
+                    <img src="../assets/images/projects/affluentsy.jpg">
                 </div>
-                <div class="projBottomSection">
-                    <div class="projTitle">
-                        Affluentsy
+                <div class="projRight box1">
+                    <div class="projInfo">
+                        <div class="projTitle box1"><a href="http://shielded-lake-4499.herokuapp.com">Affluentsy</a>
+                        </div>
+                        <p class="projDescription">A high-concept aggregator of Etsy products, this site was designed as a tongue-in-cheek blend of high-end retail sites and the more hands-on Etsy. This project features search engines, categorizing, sorting, and other features of similar retail sites.</p>
+                        <span>TECHNOLOGIES USED:</span>
+                        <p class="projTech">jQuery, Javascript, Myth, lodash/underscore templating, FontAwesome, Photoshop, JS Prototypes, Node.js, Etsy API, heroku, HTML, CSS, CSS3</p>
                     </div>
-                    <div class="projDescription">
-                        Designed as a tongue-in-cheek blend of high-end retail sites and a the more hands-on Etsy, this project incorporates search engines, categorizing, sorting, and more.
-                    </div>
-                    <div class="projLinks">
+                    <div class="projButtons">
                         <a href="http://shielded-lake-4499.herokuapp.com">
-                            <div class="liveProjLink">
-                                LIVE SITE
-                            </div>
+                            <div class="liveButton projLinkButton box1Button">Live Site</div>
                         </a>
                         <a href="https://github.com/davidjfreedman/FinalProject">
-                            <div class="gitProjLink">
-                                CODE
-                            </div>
+                            <div class="gitButton projLinkButton box1Button">View Code</div>
                         </a>
                     </div>
-                    <div class="projTech">
-                        <p class="techTitle">Tech Used</p>
-                        <p class="techText">jQuery, Javascript, Myth, lodash/underscore templating, FontAwesome, Photoshop, JS Prototypes, Node.js, Etsy API, heroku, HTML, CSS, CSS3</p>
+                </div>
+            </div>
+        </div>
+        <div class="projMargin box2">
+            <div class="projBox box2">
+                <div class="projImage">
+                    <img src="../assets/images/projects/colorclock.jpg">
+                </div>
+                <div class="projRight box2">
+                    <div class="projInfo">
+                        <div class="projTitle"><a href="http://davidjfreedman.github.io/HW23-Dates/">Color Clock</a>
+                        </div>
+                        <p class="projDescription">The time in this clock is converted into a hex value, which then shifts the background color.
+                            <br>The premise of the color-shifting was pretty hallucinatory, so I decided to amp that up with some other imagery.</p>
+                        <span>TECHNOLOGIES USED:</span>
+                        <p class="projTech">Javascript, jQuery, HTML, CSS</p>
                     </div>
-
+                    <div class="projButtons">
+                        <a href="http://davidjfreedman.github.io/HW23-Dates/">
+                            <div class="liveButton projLinkButton box2Button">Live Site</div>
+                        </a>
+                        <a href="https://github.com/davidjfreedman/HW23-Dates">
+                            <div class="gitButton projLinkButton box2Button">View Code</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projMargin box3">
+            <div class="projBox box3">
+                <div class="projImage">
+                    <img src="../assets/images/projects/watwatch.jpg">
+                </div>
+                <div class="projRight">
+                    <div class="projInfo">
+                        <div class="projTitle"><a href="http://davidjfreedman.github.io/HW25-watwatch/">WatWatch</a>
+                        </div>
+                        <p class="projDescription">A simple, normal stopwatch app. Hmm. we'll have to do something about that 'normal' bit...</p>
+                        <span>TECHNOLOGIES USED:</span>
+                        <p class="projTech">jQuery, Javascript, HTML, CSS</p>
+                    </div>
+                    <div class="projButtons">
+                        <a href="http://davidjfreedman.github.io/HW25-watwatch/">
+                            <div class="liveButton projLinkButton box3Button">Live Site</div>
+                        </a>
+                        <a href="https://github.com/davidjfreedman/HW25-watwatch">
+                            <div class="gitButton projLinkButton box3Button">View Code</div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-<!--     <div class="aboutSection">
-        <div class="aboutBox">
-            <div class="statusBox">Status</div>
-            <div class="mainInfo">
-                <div class="profilePic"></div>
-                <div class="infoText">
-                    <p class="infoName">David Freedman</p>
-                    <p class="vitalStats">
-                        <span class="statTypeBold">LV</span>31</p>
-                    <p class="vitalStats">
-                        <span class="statTypeBold">HP</span>3753/3920</p>
-                    <div class="barHP"></div>
-                    <p class="vitalStats">
-                        <span class="statTypeBold">MP</span>340/ 342</p>
-                    <div class="barMP"></div>
-                </div>
-            </div>
-            <div class="levelInfo">
-            <div class="exp"
-            </div>
-            <div class="stats">
-                <div class="statsSection1">
-                    <
-                </div>
-                <div class="statsSection2"></div>
-            </div>
-            <div class="rightLowerHalf">
-                <div class="skills"></div>
-                <div class="equipment"></div>
-            </div>
-        </div>
-    </div>
- -->    <!-- <div class="experienceSection" id="experience"> -->
-    <!-- </div> -->
-    <!-- <div class="aboutSection" id="about">
-        <div class="aboutMain">
-            <div class="leftPortion">
-                <div class="profilePic"></div>
-                <div class="aboutLinkDescription">hover for info</div>
-                <div class="aboutLinks">
-                    <div class="aboutLinkSet linkSet1">
-                        <div class="calls linkOut"></div>
-                        <div class="calls linkOut"></div>
-                        <div class="calls linkOut"></div>
-                    </div>
-                    <div class="aboutLinkSet linkSet2">
-                        <div class="calls linkOut"></div>
-                        <div class="calls linkOut"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="centerPortion">
-                <div class="aboutHeaderText">ABOUT ME</div>
-                <div class="aboutHole">
-                    <div class="aboutText">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="rightPortion">
-            <div class="blogPointer"></div>
-            <div class="blogLink">blog posts</div>
-            <div class="updatesSection">
-                <div class="updatesTop">Latest posts</div>
-                <div class="updatesMain"></div>
-            </div>
-            <div class="footer">
-                <div class="footerImageBox"></div>
-                <div class="footerImageBox"></div>
-                <div class="footerImageBox"></div>
-                <div class="footerImageBox"></div>
-                <div class="footerImageBox"></div>
-                <div class="footerImageBox"></div>
-                <div class="footerImageBox"></div>
-                <div class="footerImageBox"></div>
-                <div class="footerImageBox"></div>
-            </div>
-        </div>
-    </div> -->
     <script type="text/javascript" src="./app/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="./app/app.js"></script>
+
 </body>
 
 </html>
