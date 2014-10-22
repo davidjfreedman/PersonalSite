@@ -11,7 +11,8 @@ body {
     margin: 0;
     overflow-X: hidden;
     cursor: default;
-    background: url(../assets/images/bgAbout.jpg) no-repeat center top fixed;
+    background: url(../assets/images/bgAbout.jpg) no-repeat center fixed;
+    background-size: cover;
 }
 a {
     cursor: pointer;
@@ -19,6 +20,26 @@ a {
 .emptyDiv {
     position: absolute;
     top: -120px;
+}
+@keyframes taglineShiftL {
+    0% {
+        opacity: 0;
+        transform: translateX(-150%) skew(-15deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) skew(0);
+    }
+}
+@keyframes taglineShiftR {
+    0% {
+        opacity: 0;
+        transform: translateX(150%) skew(-15deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) skew(0);
+    }
 }
 /*"  _                _           
 | | | |              | |          
@@ -243,11 +264,13 @@ a {
     top: 25px;
     left: -58px;
     padding-left: 3em;
+    animation: taglineShiftL 1s linear;
 }
 .tagline2 {
     bottom: 35px;
     right: -54px;
     padding-right: 3em;
+    animation: taglineShiftR 1s linear;
 }
 /*"__  ______  _____ _   _ _____ 
  / _ \ | ___ \|  _  | | | |_   _|
