@@ -11,8 +11,10 @@ body {
     margin: 0;
     overflow-X: hidden;
     cursor: default;
-    background: url(../assets/images/bgAbout.jpg) no-repeat center fixed;
+    /*background: url(../assets/images/bgAbout.jpg) no-repeat center fixed;*/
+    
     background-size: cover;
+    background-color: rgb(55, 66, 86);
 }
 a {
     cursor: pointer;
@@ -188,8 +190,8 @@ a {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 1.7rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: sans-serif;
     color: rgb(110, 126, 141);
 }
 .menuLink {
@@ -202,14 +204,14 @@ a {
     color: rgb(41, 71, 100);
 }
 .menuItem {
-    padding: 0em 25px;
-    border-bottom: 4px solid rgba(0, 0, 0, 0.6);
+    padding: 0.05em 25px;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.4);
 }
 .menuItem a {
     color: rgb(110, 126, 141);
 }
 .inner {
-    background-color: rgb(17, 34, 52);
+    background-color: rgb(29, 48, 68);
 }
 .addBottom {
     border-bottom: 8px solid rgba(0, 0, 0, 0.6);
@@ -393,9 +395,9 @@ ___  ___ _____
 .jobInfo:before {
     content: "+";
     background-color: white;
-    border: 2px solid var(--mainColor);
-    padding: 0 4px;
-    border-radius: 11px;
+    border: 2px solid rgb(73, 68, 68);
+    padding: 0 5px;
+    border-radius: 15px;
     margin-right: 6px;
 }
 .jobInfo:hover:before {
@@ -535,7 +537,7 @@ a.resumeButtonLink {
     text-align: center;
     border-radius: 15px 15px 0 0;
     background-color: rgb(29, 29, 29);
-    color: rgb(224, 158, 111);
+    color: rgb(176, 184, 189);
 }
 .projMargin {
     width: 100%;
