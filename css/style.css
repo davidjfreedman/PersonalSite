@@ -19,7 +19,7 @@ a {
 }
 .emptyDiv {
     position: absolute;
-    top: -120px;
+    top: -125px;
 }
 @keyframes taglineShiftL {
     0% {
@@ -399,7 +399,8 @@ ___  ___ _____
     margin-right: 6px;
 }
 .jobInfo:hover:before {
-    background-color: rgb(216, 241, 253);
+    background-color: rgb(115, 108, 108);
+    color: white;
 }
 .separater {
     display: none;
@@ -520,6 +521,7 @@ a.resumeButtonLink {
 
 .projectsPage {
     display: block;
+    position: relative;
     width: 100%;
     background-color: rgb(183, 183, 183);
     font-family: sans-serif;
@@ -533,7 +535,7 @@ a.resumeButtonLink {
     text-align: center;
     border-radius: 15px 15px 0 0;
     background-color: rgb(29, 29, 29);
-    color: rgb(208, 107, 34);
+    color: rgb(224, 158, 111);
 }
 .projMargin {
     width: 100%;
