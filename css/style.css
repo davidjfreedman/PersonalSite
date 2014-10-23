@@ -607,6 +607,10 @@ a.resumeButtonLink {
 .projImage img {
     width: 100%;
 }
+.box2 img {
+	width: 160%;
+	height: 132%;
+}
 .projRight {
     display: block;
     width: 100%;
@@ -755,7 +759,7 @@ a.resumeButtonLink {
         width: 49%;
         vertical-align: top;
         margin-top: 0;
-        padding: 1.1rem;
+        padding: 1.1rem 0;
         padding-top: 0;
     }
     .outerLinks {
